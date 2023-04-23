@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="fp_mul_cplx_sim/fp_mul_cplx.vo" type="VERILOG" />
+ <topLevel name="fp_mul_cplx" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

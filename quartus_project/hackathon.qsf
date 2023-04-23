@@ -1,0 +1,210 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# Date created = 12:00:00 November 01, 2022
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		hackathon_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name DEVICE 5CGXFC5C6F27C7
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:11:54  NOVEMBER 05, 2022"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name BOARD "Cyclone V GX Starter Kit"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_location_assignment PIN_R20 -to CLK_50
+set_location_assignment PIN_T21 -to L1_OSC
+set_location_assignment PIN_T22 -to L1_CRS_DV
+set_location_assignment PIN_M21 -to L1_RX0
+set_location_assignment PIN_P20 -to L1_RX1
+set_location_assignment PIN_E26 -to L1_TX0
+set_location_assignment PIN_K26 -to L1_TX1
+set_location_assignment PIN_M26 -to L1_TX_EN
+set_location_assignment PIN_M9 -to UART_RX
+set_location_assignment PIN_L9 -to UART_TX
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L1_OSC
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L1_CRS_DV
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L1_RX0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L1_RX1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L1_TX0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L1_TX1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L1_TX_EN
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (SystemVerilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name USE_SIGNALTAP_FILE ../stp1.stp
+set_global_assignment -name VERILOG_FILE ../tasks/task_3/div.v
+set_global_assignment -name QIP_FILE ../tasks/task_3/div.qip
+set_global_assignment -name VERILOG_FILE ../tasks/task_10/task_10_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_10/task_10_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_10/task_10_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_10/task_10_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_10/task_10_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_10/task_10_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_10/task_10.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_10/demod16.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_9/task_9_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_9/task_9_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_9/task_9_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_9/task_9_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_9/task_9_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_9/task_9_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_9/task_9.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_9/serializer_fifo_task_9.v
+set_global_assignment -name QIP_FILE ../tasks/task_9/serializer_fifo_task_9.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_9/serializer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_9/reciprocal_sqrt.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_9/one_hot_task_9.v
+set_global_assignment -name QIP_FILE ../tasks/task_9/one_hot_task_9.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_8/task_8_serializer.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_8/task_8_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_8/task_8_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_8/task_8_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_8/task_8_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_8/task_8_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_8/task_8_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_8/task_8.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_8/serializer_fifo_task_8.v
+set_global_assignment -name QIP_FILE ../tasks/task_8/serializer_fifo_task_8.qip
+set_global_assignment -name VERILOG_FILE ../tasks/task_8/one_hot_task_8.v
+set_global_assignment -name QIP_FILE ../tasks/task_8/one_hot_task_8.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_8/butterfly.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_7/task_7_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_7/task_7_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_7/task_7_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_7/task_7_input_fifo.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_7/task_7_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_7/task_7.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_7/encoder_5b6b.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_6/task_6_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_6/task_6_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_6/task_6_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_6/task_6_input_fifo.v
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_6/task_6_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_6/task_6.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_6/encoder_3b4b.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_5/task_5_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_5/task_5_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_5/task_5_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_5/task_5_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_5/task_5_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_5/task_5_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_5/task_5.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_5/binary_2_bcd.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_4/task_4_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_4/task_4_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_4/task_4_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_4/task_4_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_4/task_4_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_4/task_4_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_4/task_4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_4/dir_detector.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_3/task_3_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_3/task_3_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_3/task_3_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_3/task_3_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_3/task_3_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_3/task_3_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_3/task_3.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_3/conv_engine.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_2/task_2_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_2/task_2_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_2/task_2_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_2/task_2_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_2/task_2_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_2/task_2_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_2/task_2.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_2/serializer_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_2/serializer_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_2/serializer.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_2/one_hot.v
+set_global_assignment -name QIP_FILE ../tasks/task_2/one_hot.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_2/line_buffer.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_1/task_1_output_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_1/task_1_output_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_1/task_1_output.sv
+set_global_assignment -name VERILOG_FILE ../tasks/task_1/task_1_input_fifo.v
+set_global_assignment -name QIP_FILE ../tasks/task_1/task_1_input_fifo.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_1/task_1_input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_1/task_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_1/rgb2gray.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/task_module.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../tasks/task_pkg.sv
+set_global_assignment -name SDC_FILE hackathon.sdc
+set_global_assignment -name VERILOG_FILE ../src/top.v -library hackathon
+set_global_assignment -name VERILOG_FILE ../src/eth_fifo.v -library hackathon
+set_global_assignment -name VERILOG_FILE ../src/uart_fifo.v -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/cdc_pipeline.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/crc.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/mac_rx.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/mac_tx.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/mac_wrapper.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/reset_release.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/uart_counter.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/uart_rx.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/uart_tx.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/uart_wrapper.sv -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/control.sv
+set_global_assignment -name VERILOG_FILE ../src/debug_port.v -library hackathon
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/mhp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../src/task_manager.sv
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH tb_top -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_SETUP_SCRIPT ../sim/sim.do -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_NAME tb_top -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id tb_top
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_top -section_id tb_top
+set_global_assignment -name EDA_TEST_BENCH_FILE ../tb/hack_if.sv -section_id tb_top
+set_global_assignment -name EDA_TEST_BENCH_FILE ../tb/hack_pkg.sv -section_id tb_top
+set_global_assignment -name EDA_TEST_BENCH_FILE ../tb/tb_top.sv -section_id tb_top
+set_global_assignment -name QIP_FILE ip_cores/fp_mul_cplx.qip
+set_global_assignment -name SIP_FILE ip_cores/fp_mul_cplx.sip
+set_global_assignment -name QIP_FILE ip_cores/fp_add.qip
+set_global_assignment -name SIP_FILE ip_cores/fp_add.sip
+set_global_assignment -name QIP_FILE ip_cores/fp_sub.qip
+set_global_assignment -name SIP_FILE ip_cores/fp_sub.sip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

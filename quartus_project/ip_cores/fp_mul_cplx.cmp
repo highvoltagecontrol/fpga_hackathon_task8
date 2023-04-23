@@ -1,0 +1,13 @@
+	component fp_mul_cplx is
+		port (
+			clk    : in  std_logic                     := 'X';             -- clk
+			areset : in  std_logic                     := 'X';             -- reset
+			a      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- a
+			b      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- b
+			c      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- c
+			d      : in  std_logic_vector(31 downto 0) := (others => 'X'); -- d
+			q      : out std_logic_vector(31 downto 0);                    -- q
+			r      : out std_logic_vector(31 downto 0)                     -- r
+		);
+	end component fp_mul_cplx;
+
